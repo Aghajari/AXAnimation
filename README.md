@@ -58,7 +58,7 @@ AXAnimation.create()
 
 ```java
 AXAnimation.create().dp()
-        .duration(2000)
+        .duration(500)
         .resize(Gravity.CENTER, width, height)
         .start(target);
 ```
@@ -70,7 +70,7 @@ AXAnimation.create().dp()
 
 ```java
 AXAnimation.create().dp()
-        .duration(2000)
+        .duration(500)
         .resize(Gravity.TOP | Gravity.RIGHT, width, height)
         .start(target);
 ```
@@ -86,7 +86,7 @@ AXAnimation.create().dp()
 
 ```java
 AXAnimation.create().dp()
-        .duration(2000)
+        .duration(500)
         .resize(left, top, right, bottom)
         .start(target);
 ```
@@ -101,7 +101,7 @@ AXAnimation.create().dp()
 
 ```java
 AXAnimation.create()
-        .duration(2000)
+        .duration(500)
         .skew(0.3f, 0.3f)
         .start(target);
 ```
@@ -109,3 +109,135 @@ AXAnimation.create()
 <br>
 
 ---
+
+<img src="/images/4.gif" alt="sample" title="sample" width="250" height="180" align="right" />
+
+-   **`matrix(Matrix... matrices)`** & **`imageMatrix(...)`**
+
+```java
+Matrix matrix = new Matrix();
+matrix.setSkew(0.15f, 0.15f);
+matrix.postScale(1.5f, 1.5f);
+matrix.postTranslate(-100, -100);
+
+AXAnimation.create()
+        .duration(1000)
+        .matrix(matrix)
+        .nextSectionWithDelay(500)
+        .reversePreviousRule()
+        .start(target);
+```
+
+---
+
+<img src="/images/5.gif" alt="sample" title="sample" width="250" height="180" align="right" />
+
+-   **`backgroundColor(int... colors)`**
+
+```java
+AXAnimation.create()
+        .duration(1000)
+        .backgroundColor(Color.MAGENTA)
+        .nextSectionWithDelay(500)
+        .reversePreviousRule()
+        .start(target);
+```
+
+---
+
+<img src="/images/6.gif" alt="sample" title="sample" width="250" height="200" align="right" />
+
+-   **`background(Drawable... drawables)`**
+
+```java
+GradientDrawable gd1 = new GradientDrawable();
+gd1.setColors(new int[]{Color.RED, Color.BLUE});
+gd1.setOrientation(GradientDrawable.Orientation.TOP_BOTTOM);
+
+GradientDrawable gd2 = new GradientDrawable();
+gd2.setColors(new int[]{Color.BLUE, Color.GREEN});
+gd2.setOrientation(GradientDrawable.Orientation.TL_BR);
+gd2.setCornerRadius(100);
+gd2.setStroke(20, Color.RED, 0, 0);
+
+ColorDrawable cd = new ColorDrawable(Color.MAGENTA);
+
+AXAnimation.create()
+        .duration(4000)
+        .background(gd1, gd2, cd)
+        .start(target);
+```
+
+---
+
+<img src="/images/7.gif" alt="sample" title="sample" width="250" height="200" align="right" />
+
+-   **`flipHorizontal`** And **`flipVertical`**
+
+```java
+AXAnimation.create()
+        .duration(1000)
+        .flipHorizontalToHide()
+        .nextSectionWithDelay(600)
+        .flipHorizontalToShow()
+        .nextSectionWithDelay(600)
+        .flipVerticalToHide()
+        .nextSectionWithDelay(600)
+        .flipVerticalToShow()
+        .start(target);
+```
+
+---
+
+<img src="/images/8.gif" alt="sample" title="sample" width="250" height="200" align="right" />
+
+-   **`drawLine(...)`**
+
+```java
+Paint paint = new Paint();
+paint.setStyle(Paint.Style.STROKE);
+paint.setStrokeWidth(20);
+paint.setColor(Color.WHITE);
+
+LiveSize y = LiveSize.create(AXAnimation.CONTENT_HEIGHT).divide(2);
+LiveSize left = LiveSize.create(16);
+LiveSize right = LiveSize.create(AXAnimation.CONTENT_HEIGHT).minus(16);
+
+AXAnimation.create().dp()
+        .duration(1000)
+        .repeatCount(AXAnimation.INFINITE)
+        .repeatMode(AXAnimation.REVERSE)
+        .drawLine("line_key", true, Gravity.CENTER, paint, left, y, right, y)
+        .start(target);
+```
+
+---
+
+<img src="/images/9.gif" alt="sample" title="sample" width="250" height="200" align="right" />
+
+-   **`drawArc(...)`**
+
+```java
+Paint paint = new Paint();
+paint.setStyle(Paint.Style.STROKE);
+paint.setStrokeWidth(20);
+paint.setColor(Color.WHITE);
+
+LiveSize cx = LiveSize.create(AXAnimation.CONTENT_WIDTH).divide(2);
+LiveSize cy = LiveSize.create(AXAnimation.CONTENT_HEIGHT).divide(2);
+
+AXAnimation.create().dp()
+        .waitBefore(1000)
+        .duration(2500)
+        .drawArc("arc_key", true, paint, cx, cy, 56, false, -90, 270, 200, 320, 270, 360)
+        .nextSectionWithDelay(500)
+        .reversePreviousRuleSection()
+        .start(target);
+```
+
+---
+<p align="center"><b>And many other interesting animations!</b></p>
+
+---
+
+s
