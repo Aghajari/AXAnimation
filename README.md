@@ -6,6 +6,17 @@
 
  AXAnimation is an Android Library which can simply animate views and everything!
  
+ ## Table of Contents  
+- [Introduction](#introduction)  
+- [Usage](#usage)
+- [LiveVar](#livevar)
+- [Better Debug](#better-debug)
+- [AXAnimatorData](#axanimatordata)
+- [Methods](#methods)
+- [Author](#author)
+- [License](#license)
+
+ 
  ## Introduction
  
  This library is made up of three main sections that you should be familiar with before you begin.
@@ -17,9 +28,9 @@
 Each Rule does a specific job for the Animation. Rules will create the Animators of animation methods.
 
 There are different types of rules :
-- **PropertyRule** : Uses `ObjectAnimator` for some methods such as `alpha()`, `rotation()`, `scale()` and etc. Also It has a subclass called **PropertyValueRule** which uses `ValueAnimator` for more customiztions.
+- **PropertyRule** : Uses `ObjectAnimator` for `alpha()`, `rotation()`, `scale()` and etc. Also It has a subclass called **PropertyValueRule** which uses `ValueAnimator` for more customiztions.
 - **RuleSet** : Can create multi rules in just one rule.
-- **NotAnimatedRule** : Some Rules have no Animators but they can update the target view's state such as `bringViewToFront` or `sendViewToBack`.
+- **NotAnimatedRule** : Some Rules have no Animators but they can update the target's state such as `bringViewToFront` or `sendViewToBack`.
 - **DrawRule** : Will draw Lines, Arcs, Shapes, Texts and etc on a `DrawableLayout` by canvas.
 
 ### RuleSection :
@@ -240,7 +251,7 @@ AXAnimation.create().dp()
 
 ---
 
-Let's see a few more custom animations (Full Activity).
+Let's see a few more custom animations.
 
 <br>
 
