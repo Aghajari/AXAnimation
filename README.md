@@ -646,6 +646,7 @@ All the rules have duration, interpolator, startDelay, repeat and reverse option
 | drawText | String, boolean, boolean, Paint, int, LiveSize, LiveSize, CharSequence | key, drawOnFront, typing, paint, gravity, x, y, text |
 | drawText | String, boolean, boolean, Paint, int, float, float, LiveVar\<CharSequence\> | key, drawOnFront, typing, paint, gravity, x, y, text |
 | drawText | String, boolean, boolean, Paint, int, LiveSize, LiveSize, LiveVar\<CharSequence\> | key, drawOnFront, typing, paint, gravity, x, y, text |
+| removeDrawRule | String | key |
 
 ### Custom Rules
 
@@ -703,6 +704,39 @@ All the rules have duration, interpolator, startDelay, repeat and reverse option
 | copyOfView | boolean \| boolean, boolean | focusOnCopy \| removeCopyAtTheEnd, focusOnCopy |
 | copyOfView | boolean, boolean, AXAnimation | removeCopyAtTheEnd, focusOnCopy, placeholderAnimation |
 | addPreRule | PreRule | preRule |
+| start | View | view |
+| reverse | View | view |
+| end | View | view |
+| pause | Void | |
+| resume | Void | |
+| cancel | Void | |
+| end | Void | |
+| getTotalDuration | Void | |
+| getCurrentPlayTime | Void | |
+| setCurrentPlayTime | long | playTime |
+| getAnimatedFraction | Void | |
+| addAnimatorListener | AXAnimatorListener | listener |
+| removeAnimatorListener | AXAnimatorListener | listener |
+| withSectionStartAction | AXAnimatorStartListener | listener |
+| withSectionEndAction | AXAnimatorEndListener | listener |
+| withStartAction | AXAnimatorStartListener | listener |
+| withEndAction | AXAnimatorEndListener | listener |
+| addStartAction | AXAnimatorStartListener | listener |
+| addEndAction | AXAnimatorEndListener | listener |
+| removeStartAction | AXAnimatorStartListener | listener |
+| removeEndAction | AXAnimatorEndListener | listener |
+| resetAnimatorValues | Void | |
+| resetAnimation | Void | |
+| importAnimation | AXAnimation | animation |
+| setAnimation | AXAnimation | animation |
+| createSimpleAnimator : AXSimpleAnimator | View | target |
+| save | String | animationName |
+| getAnimation | String | animationName |
+| getAnimationsOfView | View | view |
+| clear | View | view |
+| measureUnit | float | density |
+| dp | Void | |
+| px | Void | |
 
 ## Author
 Amir Hossein Aghajari
