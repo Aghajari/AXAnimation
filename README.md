@@ -510,7 +510,172 @@ This will debug everything like this example :
 
 ## AXAnimatorData
 All the rules have duration, interpolator, startDelay, repeat and reverse options.
+
+## Methods
+
+### Transformation & Property & Smart Rules
+
+| Method Name | Param Types | Param Names |
+| ----------------------- | ---------------------- | ---------------------- |
+| translationX | Float... \| LiveVar<Float[]> | x |
+| translationY | Float... \| LiveVar<Float[]> | y |
+| translationZ | Float... \| LiveVar<Float[]> | z |
+| translation | float, float | x, y |
+| x | Float... \| LiveVar<Float[]> | x |
+| y | Float... \| LiveVar<Float[]> | y |
+| z | Float... \| LiveVar<Float[]> | z |
+| xyz | float, float, float \| Float[], Float[], Float[] | x, y, z |
+| pivotX | Float... \| LiveVar<Float[]> | pivotX |
+| pivotY | Float... \| LiveVar<Float[]> | pivotY |
+| alpha | Float... \| LiveVar<Float[]> | alpha |
+| scale | Float... \| LiveVar<Float[]> | scale |
+| scaleX | Float... \| LiveVar<Float[]> | scaleX |
+| scaleY | Float... \| LiveVar<Float[]> | scaleY |
+| skew | float, float \| PointF... | kx, ky \| skewValues |
+| imageSkew | float, float \| PointF... | kx, ky \| skewValues |
+| rotation | Float... \| LiveVar<Float[]> | rotation |
+| rotationX | Float... \| LiveVar<Float[]> | rotationX |
+| rotationY | Float... \| LiveVar<Float[]> | rotationY |
+| cameraDistance | Float... \| LiveVar<Float[]> | distance |
+| visibility | int | visibility |
+| backgroundColor | Integer... \| LiveVar<Integer[]> | colors |
+| background | Drawable... | backgrounds |
+| backgroundFade | Drawable... | backgrounds |
+| textColor | Integer... \| LiveVar<Integer[]> | colors |
+| textSize | Float... \| LiveVar<Float[]> | sizes |
+| textSize | int, Float... \| int, LiveVar<Float[]> | unit, sizes |
+| matrix | Matrix... | matrices |
+| imageMatrix | Matrix... | matrices |
+| flipHorizontal | Void \| float | Void \| finalRotation |
+| flipHorizontalToHide | Void \| int | Void \| visibility |
+| flipHorizontalToShow | Void | |
+| flipVertical | Void \| float | Void \| finalRotation |
+| flipVerticalToHide | Void \| int | Void \| visibility |
+| flipVerticalToShow | Void | |
+| flash | Void | |
+| bounceIn | Void | |
+| bounceOut | Void | |
+| fadeInt | Void | |
+| fadeOut | Void | |
+| shake | Void \| float, float | Void \| nbShake, translation |
+| shakeY | Void \| float, float | Void \| nbShake, translation |
+| press | Void \| float | Void \| depth |
+
+### Layout Rules
+
+| Method Name | Param Types | Param Names |
+| ----------------------- | ---------------------- | ---------------------- |
+| setTargetLayoutParams | ViewGroup.LayoutParams | targetLayoutParams |
+| fromLayoutParams | ViewGroup.LayoutParams | layoutParams |
+| toLayoutParams | ViewGroup.LayoutParams | layoutParams |
+| toLayoutParams | ViewGroup.LayoutParams, boolean | layoutParams, markAsTarget |
+| backToFirstPlace | Void | |
+| backToFirstPlace | boolean | markAsTarget |
+| backToPreviousPlace | Void | |
+| backToSectionPlace | int | sectionIndex |
+| moveOnPath | Path | path |
+| move | int, int, int \| int, LiveSize, LiveSize | gravity, x, y |
+| move | int, Point... | gravity, points |
+| relativeMove | int, int, int, Point \| View, int, int, Point | view, sourceGravity, targetGravity, delta |
+| relativeMove | int, int, int, int, int \| View, int, int, int, int | view, sourceGravity, targetGravity, dx, dy |
+| toLeft | int \| LiveSize | left |
+| toTop | int \| LiveSize | top |
+| toRight | int \| LiveSize | right |
+| toBottom | int \| LiveSize | bottom |
+| toCenterHorizontal | int \| LiveSize | center |
+| toCenterVertical | int \| LiveSize | center |
+| toLeftOf | int, int, int \| View, int, int | view, gravity, delta |
+| toTopOF | int, int, int \| View, int, int | view, gravity, delta |
+| toRightOf | int, int, int \| View, int, int | view, gravity, delta |
+| toBottomOf | int, int, int \| View, int, int | view, gravity, delta |
+| toCenterHorizontalOf | int, int, int \| View, int, int | view, gravity, delta |
+| toCenterVerticalOf | int, int, int \| View, int, int | view, gravity, delta |
+| toCenterOf | int \| View | view |
+| toCenterOf | int, int \| View, int | view, gravity |
+| toCenterOf | int, int, int, int \| View, int, int, int | view, gravity, horizontalDelta, verticalData |
+| toPosition | int, int | gravity, position |
+| toPosition | int, int, int | gravity, x, y |
+| toPositionOf | int, int, int, int \| View, int, int, int | view, sourceGravity, targetGravity, delta |
+| resize | int[4] \| LiveSize[4] | left, top, right, bottom |
+| resize | Rect... \| LayoutSize... | values |
+| resizeHorizontal | int[2] \| LiveSize[2] | left, right |
+| resizeHorizontal | Rect... \| LayoutSize... | values |
+| resizeVertical | int[2] \| LiveSize[2] | top, bottom |
+| resizeVertical | Rect... \| LayoutSize... | values |
+| resizeWidth | int, int... \| int, LiveSize... | gravity, width |
+| resizeHeight | int, int... \| int, LiveSize... | gravity, height |
+| resize | int, int, int \| int, LiveSize, LiveSize | gravity, width, height |
+| padding | int[4] \| Rect... | left, top, right, bottom \| values |
+
+### Draw Rules
+
+| Method Name | Param Types | Param Names |
+| ----------------------- | ---------------------- | ---------------------- |
+| drawSetPaint | Paint, String, boolean, T... | target, propertyName, reset, values |
+| drawSetPaint | Paint, String, boolean, TypeEvaluator\<?\>, T... | target, propertyName, reset, evaluator, values |
+| drawSetPaint | Paint, String, boolean, LiveVar\<T[]\> | target, propertyName, reset, values |
+| drawSetPaint | Paint, String, boolean, TypeEvaluator\<?\>, LiveVar\<T[]\> | target, propertyName, reset, evaluator, values |
+| drawSetMatrix | String, boolean, Matrix... | key, drawOnFront, values |
+| drawPath | String, boolean, Paint, Path | key, drawOnFront, paint, path |
+| drawPath | String, boolean, int, Paint, Path | key, drawOnFront, lineGravity, paint, path |
+
+### Custom Rules
+
+| Method Name | Param Types | Param Names |
+| ----------------------- | ---------------------- | ---------------------- |
+| property | String, float... \| String, int... | propertyName, values |
+| propertySize | String, float... \| String, int... | propertyName, values |
+| propertyColor | String, int... | propertyName, colors |
+| property | String, TypeEvaluator\<T\>, T... | propertyName, evaluator, values |
+| custom | AXAnimatorUpdateListener\<Float\>, float... | listener, values |
+| custom | AXAnimatorUpdateListener\<Integer\>, int... | listener, values |
+| customArgb | AXAnimatorUpdateListener\<Integer\>, int... | listener, values |
+| custom | TypeEvaluator\<T\>, AXAnimatorUpdateListener\<T\>, T... | evaluator, listener, values |
+| customMatrix | AXAnimatorUpdateListener\<Matrix\>, Matrix... | listener, matrices |
+| invoke | String, Object... | methodName, args |
+| invoke | int, String, Object... \| View, String, Object... | view, methodName, args |
+| fieldSet | String, Object | fieldName, value |
+| fieldSet | int, String, Object \| View, String, Object | view, fieldName, value |
+| fieldAnimatorSet | String, boolean, TypeEvaluator\<T\>, T... | fieldName, invalidate, evaluator, values |
+| fieldAnimatorSet | String, AXAnimatorUpdateListener\<T\>, boolean, TypeEvaluator\<T\>, T... | fieldName, listener, invalidate, evaluator, values |
  
+### Other Methods
+ 
+| Method Name | Param Types | Param Names |
+| ----------------------- | ---------------------- | ---------------------- |
+| addRule | Rule... | rules |
+| addReverseRule | Rule... | rules |
+| addRuleSection | RuleSection... | ruleSections |
+| bringViewToFront | Void | |
+| bringViewToFront | int \| View | view |
+| sendViewToBack | Void | |
+| sendViewToBack | int \| View | view |
+| startOtherAnimation | AXAnimation \| AXAnimation, View  \| AXAnimation, int | animation \| animation, view |
+| startOtherAnimation | String \| String, View \| String, int | animation \| animationName, view |
+| reverseOtherAnimation | AXAnimation \| AXAnimation, View  \| AXAnimation, int | animation \| animation, view |
+| reverseOtherAnimation | String \| String, View \| String, int | animation \| animationName, view |
+| reversePreviousRule | Void | |
+| reverseRule | int \| Rule | index \| rule |
+| reverseRuleOnSection | int, int \| int, RuleSection \| Rule, RuleSection | rule, ruleSection |
+| reversePreviousRuleSection | Void | |
+| reverseRuleSection | int \| RuleSection | index \| ruleSection |
+| updateLiveVar | LiveVarUpdater | liveVarUpdater |
+| updateLiveVar | LiveVar, Object | var, value |
+| repeatPreviousRuleSection | int, int, long | repeatCount, repeatMode, delay |
+| repeatRuleSection | int, int, long, int \| int, int, long, RuleSection | repeatCount, repeatMode, delay, ruleSection |
+| nextSection | Void | |
+| nextSectionImmediate | Void | |
+| nextSectionWithDelay | long | delay |
+| nextSectionWithReverseDelay | long | delay |
+| waitBefore | long | duration |
+| waitNotifyBefore | WaitNotifyRule.Listener \| long, WaitNotifyRule.Listener | listener \| delay, listener |
+| requiresApi | int | api |
+| wrap | Class\<? extends RuleWrapper\> | wrapper |
+| wrap | Class\<? extends RuleSectionWrapper\>, boolean | wrapper, wrapDelays |
+| copyOfView | boolean \| boolean, boolean | focusOnCopy \| removeCopyAtTheEnd, focusOnCopy |
+| copyOfView | boolean, boolean, AXAnimation | removeCopyAtTheEnd, focusOnCopy, placeholderAnimation |
+| addPreRule | PreRule | preRule |
+
 ## Author
 Amir Hossein Aghajari
 
