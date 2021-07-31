@@ -618,6 +618,34 @@ All the rules have duration, interpolator, startDelay, repeat and reverse option
 | drawSetMatrix | String, boolean, Matrix... | key, drawOnFront, values |
 | drawPath | String, boolean, Paint, Path | key, drawOnFront, paint, path |
 | drawPath | String, boolean, int, Paint, Path | key, drawOnFront, lineGravity, paint, path |
+| drawLine | String, boolean, int, Paint, float, float, float, float | key, drawOnFront, lineGravity, paint, startX, startY, stopX, stopY |
+| drawLine | String, boolean, int, Paint, LiveSize, LiveSize, LiveSize, LiveSize | key, drawOnFront, lineGravity, paint, startX, startY, stopX, stopY |
+| drawLine | String, boolean, int, Paint, PointF[]... | key, drawOnFront, lineGravity, paint, values |
+| drawLine | String, boolean, int, Paint, LiveSizePoint[]... | key, drawOnFront, lineGravity, paint, values |
+| drawArc | String, boolean, Paint, float, float, float, boolean, float, float... | key, drawOnFront, paint, cx, cy, radius, useCenter, startAngle, sweepAngles |
+| drawArc | String, boolean, Paint, LiveSize, LiveSize, float, boolean, float, float... | key, drawOnFront, paint, cx, cy, radius, useCenter, startAngle, sweepAngles |
+| drawArc | String, boolean, Paint, RectF, float, boolean, float, float... | key, drawOnFront, paint, oval, radius, useCenter, startAngle, sweepAngles |
+| drawArc | String, boolean, Paint, LiveSize, float, boolean, float, float... | key, drawOnFront, paint, oval, radius, useCenter, startAngle, sweepAngles |
+| drawCircle | String, boolean, Paint, float, float, float, boolean, float | key, drawOnFront, paint, cx, cy, radius, useCenter, startAngle |
+| drawCircle | String, boolean, Paint, LiveSize, LiveSize, float, boolean, float | key, drawOnFront, paint, cx, cy, radius, useCenter, startAngle |
+| drawOval | String, boolean, Paint, RectF, float, boolean, float | key, drawOnFront, paint, oval, radius, useCenter, startAngle |
+| drawOval | String, boolean, Paint, LiveSize, float, boolean, float | key, drawOnFront, paint, oval, radius, useCenter, startAngle |
+| drawOvalRect | String, boolean, Paint, int, RectF...  | key, drawOnFront, paint, gravity, values |
+| drawOvalRect | String, boolean, Paint, int, LayoutSize...  | key, drawOnFront, paint, gravity, values |
+| drawOvalRect | String, boolean, Paint, int, float[4]  | key, drawOnFront, paint, gravity, left, top, right, bottom |
+| drawOvalRect | String, boolean, Paint, int, LiveSize[4]  | key, drawOnFront, paint, gravity, left, top, right, bottom |
+| drawRect | String, boolean, Paint, int, RectF...  | key, drawOnFront, paint, gravity, values |
+| drawRect | String, boolean, Paint, int, LayoutSize...  | key, drawOnFront, paint, gravity, values |
+| drawRect | String, boolean, Paint, int, float[4]  | key, drawOnFront, paint, gravity, left, top, right, bottom |
+| drawRect | String, boolean, Paint, int, LiveSize[4]  | key, drawOnFront, paint, gravity, left, top, right, bottom |
+| drawRoundRect | String, boolean, Paint, int, float, float, RectF...  | key, drawOnFront, paint, gravity, rx, ry, values |
+| drawRoundRect | String, boolean, Paint, int, float, float, LayoutSize...  | key, drawOnFront, paint, gravity, rx, ry, values |
+| drawRoundRect | String, boolean, Paint, int, float, float, float[4]  | key, drawOnFront, paint, gravity, rx, ry, left, top, right, bottom |
+| drawRoundRect | String, boolean, Paint, int, float, float, LiveSize[4]  | key, drawOnFront, paint, gravity, rx, ry, left, top, right, bottom |
+| drawText | String, boolean, boolean, Paint, int, float, float, CharSequence | key, drawOnFront, typing, paint, gravity, x, y, text |
+| drawText | String, boolean, boolean, Paint, int, LiveSize, LiveSize, CharSequence | key, drawOnFront, typing, paint, gravity, x, y, text |
+| drawText | String, boolean, boolean, Paint, int, float, float, LiveVar\<CharSequence\> | key, drawOnFront, typing, paint, gravity, x, y, text |
+| drawText | String, boolean, boolean, Paint, int, LiveSize, LiveSize, LiveVar\<CharSequence\> | key, drawOnFront, typing, paint, gravity, x, y, text |
 
 ### Custom Rules
 
