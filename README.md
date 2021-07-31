@@ -512,9 +512,11 @@ This will debug everything like this example :
 All the rules have duration, interpolator, startDelay, repeat and reverse options.
 
 ## Methods
-
+<details><summary><b>Click to expand</b></summary>
+<p>
+ 
 ### Transformation & Property & Smart Rules
-
+ 
 | Method Name | Param Types | Param Names |
 | ----------------------- | ---------------------- | ---------------------- |
 | translationX | Float... \| LiveVar<Float[]> | x |
@@ -560,9 +562,9 @@ All the rules have duration, interpolator, startDelay, repeat and reverse option
 | shake | Void \| float, float | Void \| nbShake, translation |
 | shakeY | Void \| float, float | Void \| nbShake, translation |
 | press | Void \| float | Void \| depth |
-
+ 
 ### Layout Rules
-
+ 
 | Method Name | Param Types | Param Names |
 | ----------------------- | ---------------------- | ---------------------- |
 | setTargetLayoutParams | ViewGroup.LayoutParams | targetLayoutParams |
@@ -606,9 +608,9 @@ All the rules have duration, interpolator, startDelay, repeat and reverse option
 | resizeHeight | int, int... \| int, LiveSize... | gravity, height |
 | resize | int, int, int \| int, LiveSize, LiveSize | gravity, width, height |
 | padding | int[4] \| Rect... | left, top, right, bottom \| values |
-
+ 
 ### Draw Rules
-
+ 
 | Method Name | Param Types | Param Names |
 | ----------------------- | ---------------------- | ---------------------- |
 | drawSetPaint | Paint, String, boolean, T... | target, propertyName, reset, values |
@@ -667,9 +669,9 @@ All the rules have duration, interpolator, startDelay, repeat and reverse option
 | fieldSet | int, String, Object \| View, String, Object | view, fieldName, value |
 | fieldAnimatorSet | String, boolean, TypeEvaluator\<T\>, T... | fieldName, invalidate, evaluator, values |
 | fieldAnimatorSet | String, AXAnimatorUpdateListener\<T\>, boolean, TypeEvaluator\<T\>, T... | fieldName, listener, invalidate, evaluator, values |
- 
+
 ### Other Methods
- 
+
 | Method Name | Param Types | Param Names |
 | ----------------------- | ---------------------- | ---------------------- |
 | addRule | Rule... | rules |
@@ -737,6 +739,8 @@ All the rules have duration, interpolator, startDelay, repeat and reverse option
 | measureUnit | float | density |
 | dp | Void | |
 | px | Void | |
+
+</p></details>
 
 ## Author
 Amir Hossein Aghajari
