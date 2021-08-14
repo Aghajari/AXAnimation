@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.aghajari.sample.animator.activity.ActivityDrawable;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         try {
             startActivity(new Intent(this,
-                    Class.forName("com.aghajari.sample.animator.activity." + (String) view.getTag())));
+                    Class.forName("com.aghajari.sample.animator.activity." + view.getTag())));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
