@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aghajari.sample.animator">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AX_Animator">
+
+        <activity android:name=".activity.ActivityTest" />
+        <activity android:name=".activity.ActivityAnimationSet" />
+        <activity android:name=".activity.ActivityMatrix" />
+        <activity android:name=".activity.ActivityPlaceholder" />
+        <activity android:name=".activity.ActivityDrawPath" />
+        <activity android:name=".activity.ActivityRelativeMove" />
+        <activity android:name=".activity.ActivityDraw" />
+        <activity android:name=".activity.ActivityDrawable" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

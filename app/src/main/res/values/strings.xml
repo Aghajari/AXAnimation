@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AX_Animator</string>
+    <string name="drawable_activity">Drawable Activity</string>
+    <string name="draw_activity">Draw Canvas Activity</string>
+    <string name="relative_move_activity">Relative Move + Inspection</string>
+    <string name="draw_path_activity">Draw Path Activity</string>
+    <string name="placeholder_activity">Placeholder Activity</string>
+    <string name="matrix_activity">Matrix Activity</string>
+    <string name="animation_set_activity">AnimationSet Activity</string>
+</resources>

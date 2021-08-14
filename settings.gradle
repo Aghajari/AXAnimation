@@ -1,0 +1,3 @@
+include ':AXAnimation'
+include ':app'
+rootProject.name = "AX_Animator"

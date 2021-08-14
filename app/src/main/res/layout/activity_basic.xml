@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aghajari.axanimation.layouts.AXAFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_gravity="end"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/design_default_color_primary"
+        android:text="1"/>
+
+    <TextView
+        android:id="@+id/view2"
+        android:layout_gravity="bottom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@color/design_default_color_secondary"
+        android:text="2"/>
+
+</com.aghajari.axanimation.layouts.AXAFrameLayout>

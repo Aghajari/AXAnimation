@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="onClick"
+            android:tag="ActivityDrawable"
+            android:text="@string/drawable_activity" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="onClick"
+            android:tag="ActivityDraw"
+            android:text="@string/draw_activity" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="onClick"
+            android:tag="ActivityDrawPath"
+            android:text="@string/draw_path_activity" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="onClick"
+            android:tag="ActivityRelativeMove"
+            android:text="@string/relative_move_activity" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="onClick"
+            android:tag="ActivityPlaceholder"
+            android:text="@string/placeholder_activity" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="onClick"
+            android:tag="ActivityMatrix"
+            android:text="@string/matrix_activity" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="onClick"
+            android:tag="ActivityAnimationSet"
+            android:text="@string/animation_set_activity" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="onClick"
+            android:tag="ActivityTest"
+            android:text="Test" />
+
+    </LinearLayout>
+
+</ScrollView>

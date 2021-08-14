@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aghajari.axanimation.layouts.AXAFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.aghajari.axanimation.draw.CanvasView
+        android:id="@+id/target"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@color/custom" />
+
+</com.aghajari.axanimation.layouts.AXAFrameLayout>
