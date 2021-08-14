@@ -1,4 +1,4 @@
-# AXAnimation (Coming Soon)
+# AXAnimation
 <p align="center"><img src="/images/AXAnimation.jpg"></p>
 
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
@@ -7,7 +7,8 @@
  AXAnimation is an Android Library which can simply animate views and everything!
  
  ## Table of Contents  
-- [Introduction](#introduction)  
+- [Introduction](#introduction)
+- [Installation](#installation)
 - [Usage](#usage)
 - [LiveVar](#livevar)
 - [Better Debug](#better-debug)
@@ -15,7 +16,6 @@
 - [Methods](#methods)
 - [Author](#author)
 - [License](#license)
-
  
  ## Introduction
  
@@ -45,6 +45,25 @@ PreRule will prepare target for an Animation just before starting it. For Exampl
 This was a quick introduction for AXAnimation.
 
 *Good News:* You don't need to create rules or anything by yourself, they are already made and waiting for your command to be executed.
+
+## Installation
+
+AXAnimation is available in the `mavenCentral()`, so you just need to add it as a dependency (Module gradle)
+
+Gradle
+```gradle
+implementation 'io.github.aghajari:AXAnimation:1.0.1'
+```
+
+Maven
+```xml
+<dependency>
+  <groupId>io.github.aghajari</groupId>
+  <artifactId>AXAnimation</artifactId>
+  <version>1.0.1</version>
+  <type>pom</type>
+</dependency>
+```
 
 ## USAGE
 
